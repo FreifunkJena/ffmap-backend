@@ -110,6 +110,9 @@ def main(params):
     # clear the nodedb from nodes that have not been online in $prune days
     if params['prune']:
         nodes.prune_nodes(nodedb['nodes'], now, params['prune'])
+    # clear the nodedb from a specific node by its node id
+    if params['prune_node']:
+        nodes.prune_node(nodedb['nodes'], params['prune_node'])
 
     # build nxnetworks graph from nodedb and visdata
     batadv_graph = nx.DiGraph()
@@ -176,6 +179,8 @@ if __name__ == '__main__':
                         help='Assume MAC addresses are part of vpn')
     parser.add_argument('-p', '--prune', metavar='DAYS', type=int,
                         help='forget nodes offline for at least DAYS')
+    parser.add_argument('--prune-node',
+                        help='forget node with specific node id')
     parser.add_argument('--with-rrd', dest='rrd', action='store_true',
                         default=False,
                         help='enable the rendering of RRD graphs (cpu '
