@@ -1,2 +1,8 @@
+# script-generated
+aliases*.json
+nodedb/
+
+# python bytecode / cache
 *.pyc
-aliases.json
+pycache/
+__pycache__/
