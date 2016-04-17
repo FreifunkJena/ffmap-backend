@@ -49,6 +49,7 @@ def prune_nodes(nodes, now, days):
     for node_id in prune:
         del nodes[node_id]
 
+
 def prune_node(nodes, nodeid):
     prune2 = []
     for node_id, node in nodes.items():
@@ -58,6 +59,7 @@ def prune_node(nodes, nodeid):
 
     for node_id in prune2:
         del nodes[node_id]
+
 
 def mark_online(node, now):
     node['lastseen'] = now.isoformat()
