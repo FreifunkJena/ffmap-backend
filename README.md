@@ -1,6 +1,6 @@
 # Data for Freifunk Map, Graph and Node List
 
-[![Build Status](https://travis-ci.org/ffnord/ffmap-backend.svg?branch=master)](https://travis-ci.org/ffnord/ffmap-backend)
+[![Build Status](https://travis-ci.org/FreifunkJena/ffmap-backend.svg?branch=jena)](https://travis-ci.org/FreifunkJena/ffmap-backend)
 
 ffmap-backend gathers information on the batman network by invoking :
 
